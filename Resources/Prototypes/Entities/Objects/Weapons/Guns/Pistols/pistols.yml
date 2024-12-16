@@ -251,3 +251,51 @@
         whitelist:
           tags:
             - CartridgeMagnum
+
+- type: entity
+  name: Desert Eagle
+  parent: [ BaseWeaponPistol, BaseSyndicateContraband ]
+  id: WeaponDesertEagle
+  description: Знаменитый пистолет Израильского Военного Концерна, известен по всей галактике до сих пор.
+  components:
+  - type: Sprite
+    sprite: Objects/MassMeta/deagle.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Objects/MassMeta/deagle.rsi
+  - type: ChamberMagazineAmmoProvider
+  - type: Gun
+    fireRate: 4
+    soundGunshot:
+      path: /Audio/MassMeta/DeagleAE.ogg
+      params:
+        volume: +35
+    availableModes:
+    - SemiAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineDeagle
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineDeagle
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeDeagle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeAE
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot

@@ -40,7 +40,7 @@
   parent: BaseFlag
   id: LGBTQFlag
   name: LGBTQ flag
-  description: "\"Be gay do crime\" flag."
+  description: Запрещено в РФ с соответствии с законодательством.
   components:
   - type: Sprite
     state: lgbtq_flag

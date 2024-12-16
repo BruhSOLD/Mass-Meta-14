@@ -70,3 +70,32 @@
       - state: tip
         map: [ "enum.AmmoVisualLayers.Tip" ]
         color: "#65fe08"
+
+- type: entity
+  id: BaseCartridgeAE
+  name: cartridge (.50AE)
+  parent: [ BaseCartridge, BaseRestrictedContraband ]
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CartridgeAE
+  - type: CartridgeAmmo
+    proto: BulletAE
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+
+- type: entity
+  id: CartridgeDeagle
+  name: гильза (.50AE)
+  parent: BaseCartridgeAE
+  components:
+  - type: CartridgeAmmo
+    proto: BulletAE
+

@@ -115,8 +115,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 3
-        Slash: 3
+        Piercing: 10
+        Slash: 5
 
 - type: entity
   id: PelletShotgunImprovisedSpread

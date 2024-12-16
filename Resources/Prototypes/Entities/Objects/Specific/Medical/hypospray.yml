@@ -113,7 +113,7 @@
     solution: pen
   - type: Hypospray
     solutionName: pen
-    transferAmount: 15
+    transferAmount: 20
     onlyAffectsMobs: false
     injectOnly: true
   - type: Appearance
@@ -468,3 +468,32 @@
     - id: Hypopen
     sound:
       path: /Audio/Effects/unwrap.ogg
+
+# massmeta prototypes
+
+- type: entity
+  name: Медипен с Ророриумом
+  parent: ChemicalMedipen
+  id: RororiumMedipen
+  description: Может спасти в бою, окрыляет ощущением бодрости.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: medipen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipen_empty
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 20
+        reagents:
+        - ReagentId: Rororium
+          Quantity: 15
+        - ReagentId: Ephedrine
+          Quantity: 5
+  - type: Tag
+    tags: []

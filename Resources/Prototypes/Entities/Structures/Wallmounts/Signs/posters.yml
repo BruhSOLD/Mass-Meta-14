@@ -1160,3 +1160,55 @@
   components:
   - type: Sprite
     state: originmap
+
+- type: entity
+  parent: BaseSign
+  id: PosterWellWellWell
+  abstract: true
+  components:
+  - type: WallMount
+    arc: 360
+  - type: Sprite
+    drawdepth: WallTops
+    snapCardinals: true
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/poster_broken.ogg
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          PosterBroken:
+            min: 1
+            max: 1
+        offset: 0
+
+- type: entity
+  parent: PosterWellWellWell
+  id: TylerPoster
+  suffix: MassMeta
+  name: "Tyler Durden"
+  description: "Лишь утратив все до конца, мы обретаем свободу."
+  components:
+  - type: Sprite
+    sprite: Structures/Wallmounts/MassMeta/tylerdurden.rsi
+    state: tylerdurden
+    scale: "0.1, 0.1"
+
+- type: entity
+  parent: PosterWellWellWell
+  id: FightClub
+  suffix: MassMeta
+  name: "Fight Club"
+  description: "Добро пожаловать, в бойцовский клуб. Первое правило  Клуба, не упоминать, о Бойцовском Клубе. Второе правило Клуба, не упоминать нигде, о Бойцовском Клубе. Третье правило Клуба, боец крикнул стоп, выдохся, отключился, бой окончен. Четвертое, в бою участвуют лишь двое. Пятое, бои идут один за другим. Шестое, снимать обувь и рубашки. Седьмое, бой продолжается столько, сколько нужно. Восьмое и последнее, тот кто впервые пришел в Клуб, примет бой."
+  components:
+  - type: Sprite
+    sprite: Structures/Wallmounts/MassMeta/fightclub.rsi
+    state: fightclub
+    scale: "0.1, 0.1"
