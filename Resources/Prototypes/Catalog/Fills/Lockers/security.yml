@@ -10,7 +10,6 @@
       - id: ClothingBeltSecurityFilled
       - id: Flash
       - id: ClothingEyesGlassesSecurity
-      - id: ClothingHeadsetAltSecurity
       - id: ClothingHandsGlovesCombat
       - id: ClothingShoesBootsJack
       - id: ClothingOuterCoatWarden
@@ -22,6 +21,7 @@
       - id: BookSpaceLaw
       - id: ClothingHeadHatCapWardenAlt # Corvax-SecFashion
       - id: ClothingOuterCoatWardenAlt # Corvax-SecFashion
+      - id: ClothingBackpackWarden # Corvax-SecFashion
       - id: ClothingBackpackElectropack
         amount: 2
       - id: RemoteSignaller
@@ -40,7 +40,6 @@
       - id: ClothingBeltSecurityFilled
       - id: Flash
       - id: ClothingEyesGlassesSecurity
-      - id: ClothingHeadsetAltSecurity
       - id: ClothingHandsGlovesCombat
       - id: ClothingShoesBootsJack
       - id: ClothingOuterCoatWarden
@@ -50,6 +49,7 @@
       - id: DoorRemoteArmory
       - id: HoloprojectorSecurity
       - id: BookSpaceLaw
+      - id: ClothingBackpackWarden # Corvax-SecFashion
       - id: ClothingBackpackElectropack
         amount: 2
       - id: RemoteSignaller
