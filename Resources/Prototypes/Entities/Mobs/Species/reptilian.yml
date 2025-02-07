@@ -30,7 +30,7 @@
   - type: Speech
     speechSounds: Lizard
     speechVerb: Reptilian
-      allowedEmotes: [ 'Thump' ]
+    allowedEmotes: [ 'Thump' ]
   - type: TypingIndicator
     proto: lizard
   - type: Vocal
@@ -76,8 +76,7 @@
           32:
             sprite: Corvax/Mobs/Species/displacement.rsi # Corvax-Digitigrade
             state: jumpsuit-female
-
- # Corvax-Digitigrade-Start
+    # Corvax-Digitigrade-Start
       shoes:
         sizeMaps:
           32:
@@ -95,9 +94,6 @@
             sprite: Corvax/Mobs/Species/displacement.rsi
             state: shoes
     # Corvax-Digitigrade-End
-  - type: FootprintVisualizer # Corvax-Next-Footprints
-    leftBarePrint: "footprint-left-bare-lizard"
-    rightBarePrint: "footprint-right-bare-lizard"
 
 - type: entity
   parent: BaseSpeciesDummy

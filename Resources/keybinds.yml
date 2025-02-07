@@ -609,9 +609,6 @@ binds:
 - function: TargetRightLeg
   type: State
   key: NumpadNum1
-- function: OfferItem # Corvax-Next-Offer
-  type: State
-  key: F
 - function: ToggleStanding # _CorvaxNext-edit Laying System
   type: State
   key: C
